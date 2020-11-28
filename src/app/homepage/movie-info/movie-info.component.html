@@ -1,0 +1,43 @@
+<h1>CINEMA</h1>
+<div class="roomInfoContainer">
+  <h4>Room {{ movie.id }}</h4>
+  <h2>{{ movie.title }}</h2>
+</div>
+<div class="movieContainer">
+  <img [src]="movie.poster" alt="" />
+
+  <div class="movieInfoContainer">
+    <div class="infoContainer">
+      <h2>Genres</h2>
+      <div class="detailContainer">
+        <p *ngFor="let genre of movie.genres">{{ genre }}</p>
+      </div>
+    </div>
+
+    <div class="infoContainer">
+      <h2>Year</h2>
+      <div class="detailContainer">
+        <p>{{ movie.year }}</p>
+      </div>
+    </div>
+
+    <div class="infoContainer">
+      <h2>Director</h2>
+      <div class="detailContainer">
+        <p>{{ movie.director }}</p>
+      </div>
+    </div>
+
+    <div class="infoContainer">
+      <h2>Actors</h2>
+      <div class="detailContainer">
+        <p *ngFor="let actor of movie.actors">{{ actor }}</p>
+      </div>
+    </div>
+
+    <h2>Synopsis</h2>
+    <p>{{ movie.synopsis }}</p>
+  </div>
+</div>
+
+<button mat-raised-button color="primary" routerLink="/home">Home</button>
